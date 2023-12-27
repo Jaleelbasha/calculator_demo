@@ -1,0 +1,38 @@
+<div class="calculator">
+
+  <input #data (keyup.enter)="calculateValue(data.value)" [(ngModel)] = "toShow" type="text" class="calculator-screen" />
+
+  <div class="calculator-keys">
+    
+    <button id="clear" (click)="clear()" type="button"  class="operator">AC</button>
+    <button (click)="deleteLastOne()" type="button" class="operator">DEL</button>
+    <button (click)="collectInput('/')" type="button" class="operator">/</button>
+    <button (click)="collectInput('*')" type="button"  class="operator">*</button>
+    
+    <button (click)="collectInput('7')" type="button" >7</button>
+    <button (click)="collectInput('8')"type="button" >8</button>
+    <button (click)="collectInput('9')"type="button" >9</button>
+    <button (click)="collectInput('-')"type="button"  class="operator">-</button>
+
+
+    <button (click)="collectInput('6')" type="button"  >6</button>
+    <button (click)="collectInput('5')" type="button"  >5</button>
+    <button (click)="collectInput('4')" type="button"  >4</button>
+    <button (click)="collectInput('+')" type="button"  class="operator" >+</button>
+
+
+
+    <button (click)="collectInput('1')" type="button" >1</button>
+    <button (click)="collectInput('2')" type="button" >2</button>
+    <button (click)="collectInput('3')" type="button" >3</button>
+    <button id = "equals"(click)="getResult()" type="button" class="equal-sign" >=</button>
+
+
+    <button (click)="collectInput('0')" type="button" class="zero" >0</button>
+    <button (click)="collectInput('.')"type="button" class="decimal" >.</button>
+
+
+    
+
+  </div>
+</div>
